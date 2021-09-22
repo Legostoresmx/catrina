@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+:root {
+  --main-exa-color: #EC5B3D;
+  --sold-out-color: #f1ac9e;
+  --purpura: #7d2180;
+  --naranja: #f37c31;
+  --azul:#1cb1cb;
+  --rosa: #e0198d;
+  --amarillo:#fcd230;
+  --title-font-size: 60px;
+  --font-family-main: 'Raleway', sans-serif;
+}
+
+main{
+    background-color: var(--purpura);
+    height: 100vh;
+}
+
+main div{
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/legostores-5e8b8.appspot.com/o/catrina%2F1.png?alt=media&token=784f4711-175a-4313-b24e-06ec855a9690');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
