@@ -19,15 +19,46 @@
   --font-family-main: 'Raleway', sans-serif;
 }
 
+.u-wrapper{
+    margin: 0 auto!important;
+    max-width: 1200px;
+}
+
 main{
     background-color: var(--purpura);
     height: 100vh;
 }
 
-main div{
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: [inicio] 1fr [linea2] 1fr [linea3] 1fr [linea4] 1fr[linea5] 1fr [final];
+    grid-template-rows: [inicio] 1fr [fila2] 1fr [fila3] 1fr [fila4] 1fr [fila5] 1fr [final];
+}
+.main__image--container{
+    display: flex;
+    justify-content: center;
+    grid-column: inicio / final;
+    grid-row: inicio / final;
     background-image: url('https://firebasestorage.googleapis.com/v0/b/legostores-5e8b8.appspot.com/o/catrina%2F1.png?alt=media&token=784f4711-175a-4313-b24e-06ec855a9690');
-    background-size: cover;
+    background-size:contain;
     background-position: center center;
     background-repeat: no-repeat;
-    height: 100%;
+    height: auto;
+
 }
+.main-image{
+    height: 100vh;
+}
+
+.title--container{
+    grid-column: inicio / linea3;
+    grid-row: inicio / linea2;
+}
+
+/* media Queries */
+@media screen and (max-width: 460px){
+        .main__image--container{
+            background-size: cover;
+        }
+    }
