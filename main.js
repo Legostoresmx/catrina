@@ -5,9 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
     timeline
     .from('.section_1_01', 4, {
         // y: -100,
-        x: -400,
+        x: -400,  
         ease: Power3.easeInOut
     })
+    .from('.section_1_02', 4, {
+        autoAlpha: 0
+    }, '-=2')
+    .from('.section_1_03', 4, {
+        autoAlpha: 0
+    }, '-=8')
     let scene = new ScrollMagic.Scene({
         triggerElement: '.first-section',
         duration: '100%',
@@ -28,6 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
         y: 0,
         ease: Power3.easeInOut
     }, '-=4')
+    .from('.section_2_03', 4, {
+        // y: -100,
+        x: -400,  
+        ease: Power3.easeInOut
+    }, '-=2')
+    .from('.section_2_04', 4, {
+        autoAlpha: 0
+    }, )
     let scene2 = new ScrollMagic.Scene({
         triggerElement: '.second-section',
         duration: '100%',
@@ -49,6 +63,14 @@ document.addEventListener('DOMContentLoaded', () => {
         y: 0,
         ease: Power3.easeInOut
     }, '-=4')
+    .from('.section_3_03', 4, {
+        // y: -100,
+        x: -400,  
+        ease: Power3.easeInOut
+    }, '-=2')
+    .from('.section_3_04', 4, {
+        autoAlpha: 0
+    }, )
     let scene3 = new ScrollMagic.Scene({
         triggerElement: '.third-section',
         duration: '100%',
@@ -78,6 +100,14 @@ document.addEventListener('DOMContentLoaded', () => {
         y: 0,
         ease: Power3.easeInOut
     }, '-=4')
+    .from('.section_4_05', 4, {
+        // y: -100,
+        x: -400,  
+        ease: Power3.easeInOut
+    }, '-=2')
+    .from('.section_4_06', 4, {
+        autoAlpha: 0
+    }, )
     let scene4 = new ScrollMagic.Scene({
         triggerElement: '.forth-section',
         duration: '100%',

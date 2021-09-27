@@ -92,8 +92,8 @@
 }
 
 .subheadline--img img{
-    width: 100%;
-    height: 100%;
+    width: 40px;
+    height: 40px;
     padding: 10%;
 }
 
@@ -125,6 +125,8 @@
 .img__piezas{
     width: 20%;
 }
+
+
 
 /* inicio main */
 
@@ -340,6 +342,66 @@ main{
 
 /* fin alegria */
 
+/* inicio registro */
+
+.title--form{
+    z-index: 1;
+    grid-column: linea2 / linea5;
+    grid-row: inicio / fila2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 5px;
+}
+
+.title--form h3{
+    font-weight: 900;
+    font-size:var(--subtitle-font-size);
+}
+
+.catrina-form{
+    grid-column: inicio / linea3;
+    grid-row: fila2 / fila5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img__catrina--form{
+    width: auto;
+    height: 100%;
+}
+
+.subheadline--form{
+    grid-column: linea3 / final;
+    grid-row: fila2 / fila3;
+    display: grid;
+    height: 100px;
+    grid-template-columns: [inicio] 1fr [linea2] 1fr [linea3] 1fr [linea4] 1fr[linea5] 1fr [final];
+    grid-template-rows: [inicio]  1fr [fila1] 1fr [final];
+    background-color: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter: blur( 6px );
+    border-radius: 10px;
+    margin-right: 10px;
+    align-self: center;
+}
+
+.form{
+    background-color: rgba( 255, 255, 255, 0.25 );
+    border-radius: 15px;
+    grid-column: linea3 / final;
+    grid-row: fila3 / fila5;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+    backdrop-filter: blur( 6px );
+}
+
+
+/* fin registro */
+
+
 /* media Queries */
 @media screen and (max-width: 720px){
     
@@ -376,6 +438,28 @@ main{
         }
         .img__piezas{
             width: 50%;
+        }
+        .title--form h3{
+            font-weight: 900;
+            font-size: var(--subtitle-font-size-mobile);
+        }
+        .form{
+            grid-column: inicio / final;
+            grid-row: fila4 / final;
+        }
+        .subheadline--form{
+            grid-column: linea3 / final;
+            grid-row: fila2 / fila4;
+        }
+
+        .catrina-form{
+            grid-column: inicio / linea3;
+            grid-row: fila2 / fila4;
+        }
+
+        .img__catrina--form{
+            width: 80%;
+            height: auto;
         }
     }
 
