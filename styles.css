@@ -88,6 +88,30 @@
     font-style: italic;
 }
 
+.column{
+    flex-direction: column;
+}
+
+.index3{
+    z-index: 3;
+}
+
+.index2{
+    z-index: 2;
+}
+
+.index1{
+    z-index: 1;
+}
+
+.absolute{
+    position:absolute
+}
+
+.img__piezas{
+    width: 30%;
+}
+
 /* inicio main */
 
 main{
@@ -110,8 +134,8 @@ main{
     align-items: center;
 }
 
-.catrina img{
-    width: 80%;
+.catrina--img__main{
+    width: 50%;
 }
 
 .main__image--container{
@@ -217,6 +241,18 @@ main{
     background-image: url('https://firebasestorage.googleapis.com/v0/b/legostores-5e8b8.appspot.com/o/catrina%2F2.png?alt=media&token=d7af2a67-0aa6-495b-ad10-c5ca8ac692c9');
 }
 
+.morado{
+    color: var(--purpura);
+}
+
+.space-sombrero{
+    transform: matrix(1, 0, 0, 1, 1, -100);
+}
+
+.space-cabeza{
+    transform: matrix(1, 0, 0, 1, 1, 100);
+}
+
 /* fin elegancia */
 
 /* inicio sombrero */
@@ -228,6 +264,14 @@ main{
 .img_sombrero{
     background-image: url('https://firebasestorage.googleapis.com/v0/b/legostores-5e8b8.appspot.com/o/catrina%2F3.png?alt=media&token=3ebe22e7-b62e-4ce6-ba94-546adc512490');
 
+}
+
+.space-sombrero-sombrero{
+    transform: matrix(1, 0, 0, 1, 1, -100);
+}
+
+.space-cabeza-cuerpo{
+    transform: matrix(1, 0, 0, 1, 1, 100);
 }
 
 /* fin sombrero  */
@@ -258,6 +302,7 @@ main{
 
 /* media Queries */
 @media screen and (max-width: 720px){
+    
         .main__image--container{
             background-size: cover;
         }
@@ -285,6 +330,12 @@ main{
         }
         .text--subheadline{
             font-size: var(--text-font-size-mobile);
+        }
+        .catrina--img__main{
+            width: 80%;
+        }
+        .img__piezas{
+            width: 50%;
         }
     }
 
