@@ -59,5 +59,34 @@ document.addEventListener('DOMContentLoaded', () => {
     .setPin('.third-section')
     .addTo(controller);
 
+    
+    let timeline4 = new TimelineMax();
+    timeline4
+    .to('.section_4_01', 4, {
+        y:0,
+        ease: Power3.easeInOut
+    })
+    .to('.section_4_02', 4, {
+        y: 0,
+        ease: Power3.easeInOut
+    }, '-=4')
+    .to('.section_4_03', 4, {
+        y: 0,
+        ease: Power3.easeInOut
+    }, '-=4')
+    .to('.section_4_04', 4, {
+        y: 0,
+        ease: Power3.easeInOut
+    }, '-=4')
+    let scene4 = new ScrollMagic.Scene({
+        triggerElement: '.forth-section',
+        duration: '100%',
+        triggerHook: 0,
+        offset: '0'
+    })
+    .setTween(timeline4)
+    .setPin('.forth-section')
+    .addTo(controller);
+
    
 })
