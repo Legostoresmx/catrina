@@ -15,14 +15,80 @@
   --azul:#1cb1cb;
   --rosa: #e0198d;
   --amarillo:#fcd230;
-  --title-font-size: 60px;
   --font-family-main: 'Raleway', sans-serif;
+  --title-font-size: 2.5rem;
+  --title-font-size-mobile: 1.25rem;
+  --subtitle-font-size: 3.25rem;
+  --text-font-size: 1.25rem;
+  --subtitle-font-size-mobile: 2.5rem;
+  --text-font-size-mobile: .8rem;
+  --amarillo--font:#FCD230;
 }
 
 .u-wrapper{
     margin: 0 auto!important;
     max-width: 1200px;
 }
+
+.grid-template{
+    display: grid;
+    grid-template-columns: [inicio] 1fr [linea2] 1fr [linea3] 1fr [linea4] 1fr[linea5] 1fr [final];
+    grid-template-rows: [inicio] 1fr [fila2] 1fr [fila3] 1fr [fila4] 1fr [fila5] 1fr [final];
+    height: 100vh;
+}
+
+.back-image{
+    display: flex;
+    justify-content: center;
+    grid-column: inicio / final;
+    grid-row: inicio / final;
+    background-size:contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: auto;
+}
+
+.title{
+    z-index: 1;
+    grid-column: inicio / linea3;
+    grid-row: inicio / fila2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin: 5px;
+}
+
+.title h3{
+    font-size: var(--subtitle-font-size);
+    font-weight: 900;
+}
+
+.subheadline{
+    grid-column: linea3 / final;
+    grid-row: fila5 / final;
+    display: grid;
+    height: 100px;
+    grid-template-columns: [inicio] 1fr [linea2] 1fr [linea3] 1fr [linea4] 1fr[linea5] 1fr [final];
+    grid-template-rows: [inicio]  1fr [fila1] 1fr [final];
+    background-color: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter: blur( 6px );
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.container--subheadline{
+    grid-column: inicio / final;
+    grid-row: inicio / final;
+    align-self: center;
+    padding: 10px;
+}
+
+.text--subheadline{
+    font-size: var(--text-font-size);
+    font-style: italic;
+}
+
+/* inicio main */
 
 main{
     background-color: var(--purpura);
@@ -35,6 +101,19 @@ main{
     grid-template-columns: [inicio] 1fr [linea2] 1fr [linea3] 1fr [linea4] 1fr[linea5] 1fr [final];
     grid-template-rows: [inicio] 1fr [fila2] 1fr [fila3] 1fr [fila4] 1fr [fila5] 1fr [final];
 }
+
+.catrina{
+    grid-column: linea2 / linea5;
+    grid-row: fila3 / fila4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.catrina img{
+    width: 80%;
+}
+
 .main__image--container{
     display: flex;
     justify-content: center;
@@ -52,13 +131,173 @@ main{
 }
 
 .title--container{
+    z-index: 1;
     grid-column: inicio / linea3;
-    grid-row: inicio / linea2;
+    grid-row: fila4 / fila5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
 }
 
+.title--container h2{
+    font-size: var(--title-font-size);
+    font-weight: 100;
+    color: white;
+}
+
+.title--container h2 span{
+    font-weight: 700;
+}
+
+.subtitle--container{
+    z-index: 1;
+    grid-column: linea4 / final;
+    grid-row: fila3 / fila5;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+.subtitle--container h3{
+    font-size: var(--subtitle-font-size);
+    color: var(--amarillo--font);
+}
+
+.narrative--container{
+    display: grid;
+    height: 100px;
+    grid-template-columns: [inicio] 1fr [linea2] 1fr [linea3] 1fr [linea4] 1fr[linea5] 1fr [final];
+    grid-template-rows: [inicio]  1fr [fila1] 1fr [final];
+    background-color: rgb(255 255 255 / 11%);
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.text--narrative {
+    grid-column: inicio / final;
+    grid-row: inicio / final;
+    align-self: center;
+    padding: 10px;
+}
+
+.text{
+    font-size: var(--text-font-size);
+    color: var(--amarillo--font);
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.narrative--img{
+    /* position: absolute; */
+    grid-column: linea5/ final;
+    grid-row: inicio / fila1;
+    display: flex;
+    align-content: flex-start;
+    justify-content: flex-end;
+    /* margin-top: -40px; */
+}
+
+.narrative--img img{
+    width: 40px;
+}
+
+/* fin main */
+
+/* inicio elegancia */
+
+.elegancia{
+    background-color:var(--naranja);
+    height: 100vh;
+}
+
+.img_elegancia{
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/legostores-5e8b8.appspot.com/o/catrina%2F2.png?alt=media&token=d7af2a67-0aa6-495b-ad10-c5ca8ac692c9');
+}
+
+/* fin elegancia */
+
+/* inicio sombrero */
+
+.sombrero{
+    background-color: var(--azul);
+}
+
+.img_sombrero{
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/legostores-5e8b8.appspot.com/o/catrina%2F3.png?alt=media&token=3ebe22e7-b62e-4ce6-ba94-546adc512490');
+
+}
+
+/* fin sombrero  */
+
+/* inicio la bailada */
+
+.bailada{
+    background-color: var(--rosa);
+}
+
+.img_bailada{
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/legostores-5e8b8.appspot.com/o/catrina%2F4.png?alt=media&token=7885a3a1-1af0-471c-a716-627bb745e9ed');
+}
+
+/* fin la bailada */
+
+/* inicio alegria */
+
+.alegria{
+    background-color: var(--amarillo);
+}
+
+.img_alegria{
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/legostores-5e8b8.appspot.com/o/catrina%2F5.png?alt=media&token=25c4a5f8-40a9-4c78-9fdb-7573ea8537cd');
+}
+
+/* fin alegria */
+
 /* media Queries */
-@media screen and (max-width: 460px){
+@media screen and (max-width: 720px){
         .main__image--container{
             background-size: cover;
         }
+        .back-image{
+            background-size: cover;
+        }
+
+        .title--container{
+            grid-column: inicio / linea4;
+            align-items: flex-start;
+        }
+        .title--container h2{
+            font-size: var(--title-font-size-mobile);
+        }
+        .subtitle--container{
+            grid-column: linea3 / final;
+            grid-row: fila4 / final;
+            margin-bottom: 60px;
+        }
+        .subtitle--container h3{
+            font-size: var(--subtitle-font-size-mobile);
+        }
+        .text{
+            font-size: var(--text-font-size-mobile);
+        }
+        .text--subheadline{
+            font-size: var(--text-font-size-mobile);
+        }
     }
+
+/* animations */
+.loading {
+    -webkit-animation: rotation 10s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}
