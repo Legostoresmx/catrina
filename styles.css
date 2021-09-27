@@ -21,7 +21,7 @@
   --subtitle-font-size: 3.25rem;
   --text-font-size: 1.25rem;
   --subtitle-font-size-mobile: 2.5rem;
-  --text-font-size-mobile: .8rem;
+  --text-font-size-mobile: .9rem;
   --amarillo--font:#FCD230;
 }
 
@@ -404,15 +404,4 @@ main{
       97% { transform:translateY(0%); }
       99% { transform:translateY(-3%); }
       100% { transform:translateY(0); }
-  }
-
-
-  .gelatine {
-    animation: gelatine 0.5s infinite;
-  }
-  @keyframes gelatine {
-    from, to { transform: scale(1, 1); }
-    25% { transform: scale(0.8, 1); }
-    50% { transform: scale(1, 0.8); }
-    75% { transform: scale(0.85, 1); }
   }
