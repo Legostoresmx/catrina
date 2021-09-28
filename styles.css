@@ -248,6 +248,39 @@ main{
     height: 40px;
 }
 
+.arrow{
+    /* background-color: var(--naranja); */
+    grid-column: linea3 / linea4;
+    grid-row: fila3 / fila5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.arrow p{
+    font-size: var(--text-font-size);
+    color: white;
+    letter-spacing: 3px;
+}
+  .line-container {
+    width: 1px;
+    height: 80px;
+    position: relative;
+    /* margin-bottom: 100px; */
+  
+  }
+  .line {
+    position: absolute;
+    width: 2px;
+    height: 0px;
+    background-color: rgb(255, 255, 255);
+    top: 0;
+    bottom: initial;
+    animation: line-animation 2.5s ease-in-out 0s infinite normal; 
+  }
+ 
+
 /* fin main */
 
 /* inicio elegancia */
@@ -520,4 +553,10 @@ main{
       97% { transform:translateY(0%); }
       99% { transform:translateY(-3%); }
       100% { transform:translateY(0); }
+  }
+
+  @keyframes line-animation {
+    0% {height: 0px; top: 0px;}
+    50% {height: 80px; top: 0px;}
+    100% {height: 0px; top: 80px;}
   }
