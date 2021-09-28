@@ -125,6 +125,10 @@
     width: 20%;
 }
 
+/* .height-auto{
+    min-height: 100vh;
+    height: auto;
+} */
 
 
 /* inicio main */
@@ -395,6 +399,7 @@ main{
     margin-left: 10px;
     box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
     backdrop-filter: blur( 6px );
+    overflow: scroll;
 }
 
 
