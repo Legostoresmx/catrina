@@ -399,11 +399,36 @@ main{
     margin-left: 10px;
     box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
     backdrop-filter: blur( 6px );
-    overflow: scroll;
+    /* overflow: scroll; */
 }
 
 
+
 /* fin registro */
+
+/* inicio instrucciones */
+
+.instructions{
+    background-color: rgba( 255, 255, 255, 0.25 );
+    border-radius: 15px;
+    grid-column: inicio / final;
+    grid-row: fila2 / final;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+    backdrop-filter: blur( 6px );
+}
+
+.instructions p{
+    
+}
+
+.instructions li{
+    font-size:var(--text-font-size);
+    padding: 20px;
+}
+/* fin instrucciones */
 
 
 /* media Queries */
@@ -464,6 +489,9 @@ main{
         .img__catrina--form{
             width: 80%;
             height: auto;
+        }
+        .instructions li{
+            font-size:var(--text-font-size-mobile);
         }
     }
 
