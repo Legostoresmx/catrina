@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let timeline = new TimelineMax();
     timeline
-    .to('.section_1_00', 4, {
-        autoAlpha: 0
-    }, '-=2')
+    // .to('.section_1_00', 4, {
+    //     autoAlpha: 0
+    // }, '-=2')
     .from('.section_1_01', 4, {
         // y: -100,
         x: -400,  

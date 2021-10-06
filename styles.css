@@ -125,11 +125,95 @@
     width: 20%;
 }
 
-/* .height-auto{
-    min-height: 100vh;
-    height: auto;
-} */
+/* inicio welcome */
 
+.welcome{
+    background-color: var(--purpura);
+    height: 100vh;
+}
+
+.img_welcome{
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/legostores-5e8b8.appspot.com/o/catrina%2F1.png?alt=media&token=784f4711-175a-4313-b24e-06ec855a9690');
+}
+
+.title__welcome{
+    z-index: 1;
+    grid-column: inicio / final;
+    grid-row: fila2 / fila3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(255 255 255 / 11%);
+    border-radius: 10px;
+}
+
+.title__welcome h3{
+    font-size: 3rem;
+    margin-bottom: .2em;
+    margin-top: .2em;
+    color: var(--amarillo--font);
+    /* font-weight: 900; */
+}
+
+.text--subheadline--welcome{
+    font-size: 1.4rem;
+    text-align: left;
+    padding: 10px;
+    font-weight: 100;
+
+}
+
+.text--subheadline--welcome span{
+    font-weight: 700;
+}
+
+.form__welcome{
+    background-color: rgb(255 255 255 / 11%);
+    border-radius: 15px;
+    grid-column: inicio / final;
+    grid-row: fila3 / fila5;
+    margin: 5px;
+    backdrop-filter: blur( 6px );
+    height: fit-content;
+}
+
+.arrow__welcome{
+    grid-column: linea3 / linea4;
+    grid-row: fila5 / final;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.arrow__welcome p{
+    font-size: var(--text-font-size);
+    color: white;
+    letter-spacing: 3px;
+}
+  .line-container__welcome {
+    width: 1px;
+    height: 80px;
+    position: relative;
+    /* margin-bottom: 100px; */
+  
+  }
+  .line__welcome {
+    position: absolute;
+    width: 2px;
+    height: 0px;
+    background-color: rgb(255, 255, 255);
+    top: 0;
+    bottom: initial;
+    animation: line-animation 2.5s ease-in-out 0s infinite normal; 
+  }
+ 
+
+
+/* fin welcome */
 
 /* inicio main */
 
@@ -249,7 +333,6 @@ main{
 }
 
 .arrow{
-    /* background-color: var(--naranja); */
     grid-column: linea3 / linea4;
     grid-row: fila3 / fila5;
     display: flex;
@@ -379,21 +462,31 @@ main{
 /* fin alegria */
 
 /* inicio registro */
+.img_registro{
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/legostores-5e8b8.appspot.com/o/catrina%2F6-07%20(1).png?alt=media&token=2ba5cb8c-c9c8-4c68-b159-c99b2dc746de');
+}
 
 .title--form{
     z-index: 1;
     grid-column: linea2 / linea5;
     grid-row: inicio / fila2;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: flex-end;
+    align-items: center;
     margin: 5px;
+    flex-direction: column;
+}
+
+.instructions h2{
+    font-size: 1.5rem;
+    padding: 20px;
 }
 
 .title--form h3{
     font-weight: 900;
     font-size:var(--subtitle-font-size);
 }
+
 
 .catrina-form{
     grid-column: inicio / linea3;
@@ -499,7 +592,7 @@ main{
             width: 80%;
         }
         .img__piezas{
-            width: 50%;
+            width: 65%;
         }
         .title--form h3{
             font-weight: 900;
@@ -525,6 +618,16 @@ main{
         }
         .instructions li{
             font-size:var(--text-font-size-mobile);
+        }
+        .title__welcome h3{
+            font-size: 2rem;
+        }
+        .text--subheadline--welcome{
+            font-size: 1rem;
+        }
+        .instructions h2{
+            font-size: 1rem;
+            padding: 20px;
         }
     }
 
