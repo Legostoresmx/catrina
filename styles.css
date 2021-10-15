@@ -534,25 +534,71 @@ main{
 
 /* inicio instrucciones */
 
+.dinamica{
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-size:contain;
+    flex-direction: column;
+    /* background-position: center center;
+    background-repeat: no-repeat;
+    height: auto;
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/legostores-5e8b8.appspot.com/o/catrina%2F5.png?alt=media&token=25c4a5f8-40a9-4c78-9fdb-7573ea8537cd'); */
+}
+
+.instructions--container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .instructions{
     background-color: rgba( 255, 255, 255, 0.25 );
     border-radius: 15px;
-    grid-column: inicio / final;
-    grid-row: fila2 / final;
     margin-bottom: 10px;
     margin-right: 10px;
     margin-left: 10px;
     box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
-    backdrop-filter: blur( 6px );
+    backdrop-filter: blur( 10px );
 }
 
-.instructions p{
+.instructions--item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.instructions--item img{
+    width: 300px;
+    border: 3px solid #7d2080;
+    border-radius: 10px;
+
+}
+
+.instructions--item p{
+    width: 300px;
+    margin-bottom: 40px;
+}
+
+.instructions p span{
+    font-weight: 900;
+    font-size: var(--title-font-size);
+    color: var(--purpura);
     
 }
 
 .instructions li{
     font-size:var(--text-font-size);
     padding: 20px;
+}
+
+.margin__title{
+    margin: 40px 0px 20px 0px;
+}
+
+.instructions h2{
+    margin: 40px 0px 20px 0px;
 }
 /* fin instrucciones */
 
